@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class playermovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+    public Rigidbody pb;
+    public float forwardForce = 3000f;
+   
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void FixedUpdate ()
+    {
+
+        pb.AddForce(forwardForce * Time.deltaTime, 0,0);
+
+
+      
+        
+    }
 }
